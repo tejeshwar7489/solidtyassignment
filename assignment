@@ -1,0 +1,49 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.8.2 <0.9.0;
+
+contract HelloWorld {
+    string internal FirstName;
+    string internal LastName;
+    uint private age;
+    string private email;
+
+    function setFirstName(string memory  _FirstName) public returns (string memory) {
+        FirstName=_FirstName;
+        return FirstName;
+    
+    }
+
+    function getFirstName() public view returns (string memory) {
+        return  FirstName;
+    }
+
+    function setLastName(string memory _LastName) public returns (string memory) {
+        LastName=_LastName;
+        return LastName;
+
+    }
+
+    function getLastname() public view  returns (string memory){
+        return LastName;
+    }
+
+    function setage(uint256 _age) public returns (uint256) {
+        age = _age;
+        return age;
+
+    }
+
+    function getage() public view returns (uint) {
+        return age;
+    }
+    
+    function setemail(string memory _email) public  returns(string memory) {
+        email = _email;
+        return email;
+    }
+
+    function getemail() public  view returns (string memory) {
+        return email;
+    }
+}
